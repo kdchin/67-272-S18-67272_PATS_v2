@@ -2,6 +2,7 @@
   <h4>There are no owners in the system at this time.</h4>
 <% else %>
   <h4>Active Owners in PATS</h4>
+  <%= react_component('SearchBar') %>
   <table class="striped highlight">
     <thead>
       <th>Owner</th>
@@ -18,7 +19,7 @@
           <%= link_to edit_owner_path(owner) do %>
               <i class="material-icons">edit</i>
           <% end %>
-          &nbsp;&nbsp;&nbsp;&nbsp; 
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <%= link_to(owner_path(owner), method: :delete, data: { confirm: 'Are you sure you wish to delete this information?' }) do %>
               <i class="material-icons">delete</i>
           <% end %>
@@ -32,5 +33,5 @@
 <p>&nbsp;</p>
 
 <p><strong>
-<%= link_to "Add a New Owner", new_owner_path, class: 'waves-effect waves-light btn' %> 
+<%= link_to "Add a New Owner", new_owner_path, class: 'waves-effect waves-light btn' %>
 </strong></p>

@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   post 'medicine_costs', to: 'medicine_costs#create', as: :medicine_costs
   post 'procedure_costs', to: 'procedure_costs#create', as: :procedure_costs
 
+  get 'search/get'
+
   # Routes for searching
   # get 'medicines/search', to: 'medicines#search', as: :medicine_search
   # get 'owners/search', to: 'owners#search', as: :owner_search
